@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			font: 14px/1.5 '\5fae\8f6f\96c5\9ed1', Arial,Tahoma, sans-serif;
+		}
+		ul>li{
+			margin-left: 20px;
+		}
+		h2{
+			margin-bottom: 15px;
+		}
+		*{
+  margin:0px;
+  padding:0px;
+}
+body{
+  padding:20px;
+}
+.table-tool {
+      border-collapse: collapse;
+      border:1px solid #eee;
+      font: 14px/1.5 '\5fae\8f6f\96c5\9ed1', Arial,     Tahoma, sans-serif;
+}
+.table-tool th{
+  background: #555;
+  color:#fff;
+  position:relative;
+  border:1px solid #555;
+}
+.table-tool th>span{
+  display: inline-block;
+  width:9px;
+  height:15px;
+  background-image: url('img/arrow.png');
+  position: absolute;
+  right: 10px;
+  top:5px;
+  cursor: pointer;
+}
+.table-tool th,.table-tool td{
+  width:130px;
+  height:25px;
+  text-align: center;
+  line-height: 25px;
+}
+	</style>
+</head>
+<body>
+<h2 >数据表组件</h2>
+<div class="table1" id="table1" ></div>
+<div style="height:800px;"></div>
+<script src="js/myApi.js"></script>
+<script src="js/class.js"></script>
+<script src="js/task39.js"></script>
+<script >
+   var table1 = new TableTool().init({
+  table: $myApi.byId('table1'),
+  data: {
+    thead: ['姓名', '语文', '数学','英语'],
+    sortSwitch: [1, 1, 1],
+    tbody: {
+      1: ['王大雷', 72, 80,90],
+      2: ['郜林', 80, 76,66],
+      3: ['弗利尼奥', 49, 66,76],
+      4: ['郑智', 68, 120,96],
+      5: ['艾弗森', 92, 88,56],
+      6: ['高拉特', 87, 82,34],
+      7: ['爱心是', 87, 82,38],
+      8: ['阿福', 87, 82,49],
+      9: ['阿伽', 87, 82,53],
+      10: ['水多高', 87, 82,87],
+      11: ['如何变', 87, 82,67],
+      12: ['鹌鹑', 87, 82,68],
+      13: ['阿基', 87, 82,82],
+      14: ['人呢得', 87, 82,42],
+      15: ['飞洒', 87, 82,31],
+      16: ['文殊坊', 87, 82,21],
+      17: ['扎实', 87, 82,74],
+      18: ['查房奴', 87, 82,87],
+      19: ['啊孙村', 87, 82,34],
+      20: ['社区', 87, 82,99],
+      21: ['文档', 87, 82,59],
+      22: ['企鹅', 87, 82,77],
+    }
+  },
+  isFloat:true
+}).show();
+</script>
+<script >
+</script>
+</body>
+</html>

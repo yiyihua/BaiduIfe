@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style >
+	   *{
+	   	   padding: 0;
+	   	   margin: 0
+	   }
+	   .header{
+	   	   width: 100%;
+	   	   height: 50px;
+	   	   background-color: green;
+	   }
+	   .head{
+	   	   width: 800px;
+	   	   height: 50px;
+	   	   margin: 0 auto;
+	   }
+	   .user{
+           float: right;
+           line-height: 50px;  
+	   }
+	   #btn_login{
+	   	   color: white;
+           font-size: 20px;
+           background-color: green;
+           outline: none;
+	   } 
+	   #btn_popYes,#btn_popNo{
+           position: absolute;
+           width: 80px;
+           height: 30px;
+           bottom: 10px;
+           background-color: green;
+           color: white;
+	   }
+	   #btn_popYes{
+	   	   left: 20%;
+	   }
+	   #btn_popNo{
+	   	   left: 60%;
+	   }
+	</style>
+</head>
+<body>
+	<div class="header">
+         <div class="head">
+               <div class="user">
+                   <button id="btn_login">登 录</button>
+               </div>
+         </div>
+	</div>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<p>hello hhkel</p>
+	<script src="js/class.js"></script>
+	<script src="js/task37.js"></script>
+	<script >
+	    document.getElementById('btn_login').onclick=function(){
+	    	var html='';
+	        var t=new Popup().init({
+                id:'pupop',           //弹出层的id
+                header:'登录界面',  //title
+                width:400,            
+                height:200,
+                yesId:'btn_popYes',  //yes 按钮的id
+                noId:'btn_popNo',
+                yesFn:aa,      //按下yes的回调函数
+                noFn:bb
+            });
+            t.render(html);  
+            function aa(){
+            	alert('yes');
+            	t.destroy();
+            }   
+            function bb(){
+            	alert('no');
+            	t.destroy();
+            }  	
+	    }
+	</script>
+</body>
+</html>
