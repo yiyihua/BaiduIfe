@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+	    body{
+	    	font: 14px/1.5 '\5fae\8f6f\96c5\9ed1', Arial,Tahoma, sans-serif;
+	    }
+	    #calender{
+	    	width:220px;
+	    }
+	    #calender .cal_head{
+	    	position: relative;
+	    	width: 100%;
+	    	height: 30px;
+	    	background-color: red;
+	    	text-align: center;
+	    	line-height: 30px;
+	    }
+	    .cal_head #col_left,
+	    .cal_head #col_right{
+            position: absolute;
+            width: 15px;
+            height: 30px;
+            cursor: pointer;
+	    }
+	    #col_left{
+	    	background: url('img/left.png') no-repeat center center scroll;
+            left: 10px;
+	    }
+	    #col_right{
+	    	background: url('img/right.png') no-repeat center center scroll;
+            right: 10px;
+	    }
+	    .table_calender{
+	   	    width:100%;
+	   	    border:1px black solid;
+	   	    border-collapse:collapse;
+	    }
+	    .table_calender td{
+	    	text-align:center;
+	    	width: 30px;
+	    	height: 30px;
+	    	border-radius: 50%;
+	    }
+	    .table_calender td:hover{
+	    	color: #ccc;
+	    }
+	</style>
+</head>
+<body>
+   <div id="calender"></div>
+   <script src="js/myApi.js"></script>
+   <script src="js/class.js"></script>
+   <script src="js/task40.js"></script>
+   <script>
+        var t=new CalenderTool().init({
+          calender:$myApi.byId('calender'),
+          now:new Date(),
+          dayFn:function(day){ alert(day);}
+        }).show();
+   </script>
+</body>
+</html>
